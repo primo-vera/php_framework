@@ -1,9 +1,11 @@
 <?php
-
-/** User: LaMarca Creative... */
+/**
+ * User: LaMarca_Creative
+ * Date: 1/21/2022
+ * Time: 7:40 PM
+ */
 
 namespace app\core;
-
 /**
  * Class Application
  * 
@@ -12,15 +14,16 @@ namespace app\core;
  */
 class Application
 {
-    const EVENT_BEFORE_REQUEST = 'beforeRequest';
-    const EVENT_AFTER_REQUEST = 'afterREquest';
+    //const EVENT_BEFORE_REQUEST = 'beforeRequest';
+    //const EVENT_AFTER_REQUEST = 'afterREquest';
     //protected array $eventListeners = [];
 
-    //public static string $ROOT_DIR;
-    public Router $router;
-    public Request $request;
-    public Response $response;
-    public  static Application $app;
+    public static $ROOT_DIR;
+    public $router;
+    public $request;
+    public $response;
+    public static $app;
+    
     public function __construct($rootPath) //This is saved as static property of the application//
     {
         self::$ROOT_DIR = $rootPath;
