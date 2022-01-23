@@ -1,5 +1,5 @@
 # PHP MVC framework
-Created from: 'PHP FRAMEWORK FROM SCRATCH' YouTube series by The Codeholic,
+Created from: 'PHP FRAMEWORK FROM SCRATCH' YouTube series by The Codeholic.  
 Minimalistic custom framework created for educational purposes.
 
 Following taken from original README.md:
