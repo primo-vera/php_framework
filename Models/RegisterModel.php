@@ -17,11 +17,11 @@ use app\core\Model;
   */
   class RegisterModel extends Model
   {
-      public $firstname;
-      public $lastname;
-      public $email;
-      public $password;
-      public $passwordConfirm;
+      public $firstname = '';
+      public $lastname = '';
+      public $email = '';
+      public $password = '';
+      public $passwordConfirm = '';
   
     public function register()
     {
