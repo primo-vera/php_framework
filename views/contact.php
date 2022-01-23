@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
         <label>Body</label>
-        <textarea type="checkbox" name="body" class="form-control">
+        <textarea type="checkbox" name="body" class="form-control"></textarea>
         
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>

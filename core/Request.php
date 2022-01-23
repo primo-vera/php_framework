@@ -19,10 +19,10 @@ class Request {
     {
         $path = $_SERVER['REQUEST_URI'] ?? '/';
         $postion = strpos($path, '?');
-        if ($position === false) {
+        if ($postion === false) {
             return $path;
         }
-        return substr($path, 0, $position);
+        return substr($path, 0, $postion);
     }
 
     public function method() 
