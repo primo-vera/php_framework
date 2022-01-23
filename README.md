@@ -3,7 +3,10 @@ Created from: 'PHP FRAMEWORK FROM SCRATCH' YouTube series by The Codeholic,
 Link: https://www.youtube.com/watch?v=WKy-N0q3WRo&list=RDCMUC_UMEcP_kF0z4E6KbxCpV1w&index=3
 Minimalistic custom framework created for educational purposes.
 
-Taken from original README.md
+
+Following taken from original README.md:
+ 
+ 
 
 ## The framework is not well tested on production. If you use it on production you use it on your own risk.
 **Related core package**: https://github.com/thecodeholic/tc-php-mvc-core
