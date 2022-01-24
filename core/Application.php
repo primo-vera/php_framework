@@ -6,6 +6,8 @@
  */
 
 namespace app\core;
+
+use app\core\Database;
 /**
  * Class Application
  * 
@@ -22,15 +24,19 @@ class Application
     public $router;
     public $request;
     public $response;
+    public $db;
+
     public static $app;
     public $controller;
-    public function __construct($rootPath) //This is saved as static property of the application//
+    public function __construct($rootPath, array $config) //This is saved as static property of the application//
     {
         self::$ROOT_DIR = $rootPath;
         self::$app = $this;
         $this->request = new Request();
         $this->response = new Response();
-        $this->router = new Router($this->request, $this->response); 
+        $this->router = new Router($this->request, $this->response);
+        
+        $this->db = new Database($config['db']);
     }
 
     public function run() 
