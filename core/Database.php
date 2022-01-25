@@ -74,23 +74,10 @@ class Database {
 
     public function saveMigrations(array $migrations)
     {  
-        $newMigrations = array_map(function($m) {$migrations, ($m)});
-       
-
-
-                   
-
-       //$str = implode(',', array_map(fn($m) => "('$m')", $migrations); 
-        $this->pdo->prepare("INSERT INTO migrations (migration) VALUES 
-             ('m0001_initial.php'),
-             ('m0002_migration.php')        
+        $str = implode(",", array_map(function($m) {return "('$m')";}, $migrations)); 
+        $statement = $this->pdo->prepare("INSERT INTO migrations (migration) VALUES 
+             $str       
              ");
-        // $str = implode(',', array_map->(fn($m) =>  "('$m')", $migrations); 
-        // $statement = $this->pdo->prepare("INSERT INTO migrations (migration) VALUES
-        //     $str ");
-        // $statement->execute();
+        $statement->execute();
     }
-
 }
-
-// want to return "('$m')"; second argument is $migrations file which we want to map.
