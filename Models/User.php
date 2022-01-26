@@ -9,6 +9,7 @@ namespace app\models;
 
 use app\core\DbModel;
 use app\core\Model;
+use app\core\UserModel;
 use Dotenv\Parser\ParserInterface;
 
 /**
@@ -17,7 +18,7 @@ use Dotenv\Parser\ParserInterface;
   * @author Keith Barreras <keith.barreras@gmail.com>
   * @package app\models
   */
-  class User extends DbModel
+  class User extends UserModel
   {
     const STATUS_INACTIVE = 0;
     const STATUS_ACTIVE = 1;
@@ -28,18 +29,22 @@ use Dotenv\Parser\ParserInterface;
     public $lastname = '';
     public $email = '';
     public $status = self::STATUS_ACTIVE;
-    public $is_admin = "";
+    public $is_admin = '';
     public $password = '';
     public $passwordConfirm = '';
 
-    public function tableName(): string
+    public static function tableName(): string
     {
         return 'users';
     }
+
+    public function primaryKey(): string
+    {
+        return 'id';
+    }
   
     public function save()
-    {
-        
+    {   
         $this->status = self::STATUS_ACTIVE;
         $this->password = password_hash($this->password, PASSWORD_DEFAULT);
         return parent::save();   
@@ -76,5 +81,9 @@ use Dotenv\Parser\ParserInterface;
         ];
     }
 
+    public function getDisplayName(): string
+    {
+        return $this->firstname . ' ' . $this->lastname;
     }
+}
   
