@@ -6,10 +6,10 @@
  */
 namespace app\controllers;
 
-use app\core\Application;
-use app\core\Controller;
-use app\core\Request;
-use app\core\Response;
+use kb\phpmvc\Application;
+use kb\phpmvc\Controller;
+use kb\phpmvc\Request;
+use kb\phpmvc\Response;
 use app\models\ContactForm;
 
 /**

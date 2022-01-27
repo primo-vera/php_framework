@@ -1,11 +1,6 @@
 {
     "name": "keithbarreras/php_framework",
     "description": "PHP MVC framework.",
-    "autoload": {
-        "psr-4": {
-            "Keithbarreras\\PhpFramework\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Keith Barreras",

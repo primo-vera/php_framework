@@ -5,7 +5,7 @@
  * Time: 1:18 PM
  */
 
-use app\core\Application;
+use kb\phpmvc\Application;
 
 require_once __DIR__.'/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
