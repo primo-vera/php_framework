@@ -31,6 +31,6 @@ use app\core\Model;
 
      public function field(Model $model, $attribute)
      {
-        return new Field($model, $attribute);  
+        return new InputField($model, $attribute);  
      }
  }

@@ -7,7 +7,9 @@
 
 namespace app\core;
 
-use app\core\Database;
+
+use app\core\db\Database;
+use app\core\db\DbModel;
 /**
  * Class Application
  * 
@@ -30,10 +32,11 @@ class Application
     public $session;
     public $db;
     public $user;
+    public $view;
 
     public static $app;
     public $controller;
-    public function __construct($rootPath, array $config) //This is saved as static property of the application//
+    public function __construct($rootPath, array $config) 
     {
         $this->userClass = $config['userClass'];
         self::$ROOT_DIR = $rootPath;
@@ -42,6 +45,7 @@ class Application
         $this->response = new Response();
         $this->session = new Session();
         $this->router = new Router($this->request, $this->response);
+        $this->view = new View();
         
         $this->db = new Database($config['db']);
 
@@ -66,7 +70,7 @@ class Application
            echo $this->router->resolve();
        }catch(\Exception $e){
            $this->response->setStatusCode($e->getCode());
-           echo $this->router->renderView('_error', [
+           echo $this->view->renderView('_error', [
                'exception' => $e
             ]);
        }

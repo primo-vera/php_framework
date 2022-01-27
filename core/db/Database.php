@@ -5,7 +5,9 @@
  * Time: 1:20 PM
  */
 
-namespace app\core;
+namespace app\core\db;
+
+use app\core\Application;
 /**
  * Class Database
  * 
