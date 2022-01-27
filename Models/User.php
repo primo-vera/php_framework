@@ -7,9 +7,9 @@
 
 namespace app\models;
 
-use app\core\DbModel;
-use app\core\Model;
-use app\core\UserModel;
+use kb\phpmvc\DbModel;
+use kb\phpmvc\Model;
+use kb\phpmvc\UserModel;
 use Dotenv\Parser\ParserInterface;
 
 /**

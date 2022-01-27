@@ -1,18 +1,15 @@
 {
-    "name": "keithbarreras/php_framework",
-    "description": "PHP MVC framework.",
+    "name": "kb/php_mvc_core",   
     "authors": [
         {
             "name": "Keith Barreras",
             "email": "keith.barreras@gmail.com"
         }
     ],
+    "require": {},
     "autoload": {
         "psr-4": {
-            "app\\": "./"
+            "kb\\phpmvc\\": "."
         }
-    },
-    "require": {
-        "vlucas/phpdotenv": "^5.4"
     }
 }

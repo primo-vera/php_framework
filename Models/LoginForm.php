@@ -7,8 +7,8 @@
 
 namespace app\models;
 
-use app\core\Application;
-use app\core\Model;
+use kb\phpmvc\Application;
+use kb\phpmvc\Model;
 use app\controllers\AuthController;
 
 /**
